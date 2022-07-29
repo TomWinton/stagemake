@@ -16,22 +16,37 @@ export function okAsNumber(thing : any )
     }
     return false;
 }
+export function containerElement (id: string) 
+{
+    const Container =<HTMLDivElement>(document.createElement('div'));
+    Container.id = id;
+    Container.className = "buttonSection";
+    console.log(Container)
+    return Container
+
+}
 export class createSectionInfo
 {
     shouldProcess: boolean;
     rows: number;
     seats: number;
+    priority: string;
     constructor()
     {
         this.shouldProcess = true;
         const cont = document.getElementById("createButtonContainer");
-        if (shouldAdd(cont) &&         cont.getElementsByTagName("input").length == 2
+        console.log(cont);
+        if (shouldAdd(cont) &&         cont.getElementsByTagName("input").length == 3
         &&  okAsNumber( cont.getElementsByTagName("input")[0].value) &&
          okAsNumber( cont.getElementsByTagName("input")[1].value) 
         )
         {
             this.seats= parseInt( cont.getElementsByTagName("input")[0].value);
             this.rows= parseInt( cont.getElementsByTagName("input")[1].value);
+            if (shouldAdd( cont.getElementsByTagName("input")[2].value))
+            {
+                    this.priority = cont.getElementsByTagName("input")[2].value;
+            }
         }       
         else
         {

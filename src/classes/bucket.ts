@@ -16,12 +16,11 @@ constructor(baseId: string, stageContainer: string, buttonContainer: string, bot
     {
     this.Base = document.getElementById(baseId) as HTMLDivElement; 
     let containerElement =  document.getElementById(stageContainer);
-    if(shouldAdd(containerElement))
+    if(shouldAdd(containerElement) )
     {
     this.Stage =new Konva.Stage({
-        container: stageContainer,
-        width: containerElement!.clientWidth,
-        height:containerElement!.clientHeight,
+        container: stageContainer
+        , width: 650 ,height:450
         
         
       });
@@ -55,7 +54,7 @@ constructor(baseId: string, stageContainer: string, buttonContainer: string, bot
       throw console.error(("No bottom container element. BLARGH"));
       
     }
-
+    
     
 }
 
