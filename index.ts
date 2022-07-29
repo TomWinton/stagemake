@@ -2,11 +2,11 @@
 import Konva from 'konva';
 import { stringToArray } from 'konva/lib/shapes/Text';
 import {Stage} from "konva/lib/Stage";
-import {Bucket} from  "./classes/bucket";
-import {DoStuff} from "./utils/doStuff"
-import {createSquare, shouldAdd} from "./utils/lazy"
-import * as json from "./assets/sample.json"
-//import {dbCon} from "./classes/dbStuff"
+import {Bucket} from  "./src/classes/bucket";
+import {DoStuff} from "./src/utils/doStuff"
+import {createSquare, shouldAdd} from "./src/utils/lazy"
+import * as json from "./src/assets/sample.json"
+import {dbCon} from "./src/classes/dbStuff"
 
 
 

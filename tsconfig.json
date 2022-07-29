@@ -7,10 +7,13 @@
     "target": "es5" /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019' or 'ESNEXT'. */,
     "module": "es6" /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */,
     "moduleResolution": "node",
-    "resolveJsonModule": true
-
- 
+    "resolveJsonModule": true,
+    "outDir": "./build/",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "allowSyntheticDefaultImports" : true ,
+    "sourceMap": true,
   },
-  "include":["src","public"], 
+  "include":["src","public", "index.ts"], 
   "exclude": ["build" ,"node_modules","storybook","stories","storybook-static", "**/*.spec.ts"]
 }
